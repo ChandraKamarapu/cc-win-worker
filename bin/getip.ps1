@@ -1,1 +1,1 @@
-Get-Process
+C:\concourse\Azure-Test.ps1
