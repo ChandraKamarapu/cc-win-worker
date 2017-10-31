@@ -11,10 +11,11 @@ resources:
     source:
       uri: https://github.com/chandrakamarapu/cc-win-worker
       branch: master
-  - name: GetBinary
-    type: archive
+  - name: Get-LIS
+    type: github-release
     source:
-      uri: https://download.microsoft.com/download/6/8/F/68FE11B8-FAA4-4F8D-8C7D-74DA7F2CFC8C/lis-rpms-4.2.3.tar.gz
+      owner: lis
+      repository: lis-next 
   - name: AutomationCode
     type: git
     source:
@@ -27,7 +28,8 @@ jobs:
       - aggregate:
         - get: AutomationCode
         - get: Initiator
-        - get: GetBinary
+        - get: Get-LIS
+          version: { tag: 'v4.2.3' }
           trigger: true
       - task: execute
         privileged: true
