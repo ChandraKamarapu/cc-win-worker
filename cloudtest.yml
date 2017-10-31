@@ -27,6 +27,7 @@ jobs:
       - aggregate:
         - get: AutomationCode
         - get: Initiator
+        - get: GetBinary
           trigger: true
       - task: execute
         privileged: true
