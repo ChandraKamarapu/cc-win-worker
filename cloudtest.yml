@@ -11,7 +11,7 @@ resources:
     source:
       uri: https://github.com/chandrakamarapu/cc-win-worker
       branch: master
-  -name: GetBinary
+  - name: GetBinary
     type: archive
     source:
       uri: https://download.microsoft.com/download/6/8/F/68FE11B8-FAA4-4F8D-8C7D-74DA7F2CFC8C/lis-rpms-4.2.3.tar.gz
