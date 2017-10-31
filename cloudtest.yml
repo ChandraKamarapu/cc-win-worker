@@ -30,6 +30,7 @@ jobs:
         - get: Initiator
         - get: Get-LIS
           version: { tag: 'v4.2.3' }
+          params: { globs: ["v4.2.3.tar.gz"] }
           trigger: true
       - task: execute
         privileged: true
