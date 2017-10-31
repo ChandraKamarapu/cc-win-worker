@@ -1,0 +1,29 @@
+---
+name: Azure
+
+# replace with `bosh status --uuid`
+director_uuid: a90e23d2-99b4-490d-9f17-64ab630d6999
+
+
+resources:
+  - name: Initiator
+    type: git
+    source:
+      uri: https://github.com/chandrakamarapu/cc-win-worker
+      branch: master
+  - name: AutomationCode
+    type: git
+    source:
+      uri: https://github.com/chandrakamarapu/azure-linux-automation
+      branch: master
+
+jobs:
+  - name: CloudTest
+    plan:
+      - aggregate:
+        - get: AutomationCode
+        - get: Initiator
+          trigger: true
+      - task: execute
+        privileged: true
+        file: Initiator/cc-win.yml
