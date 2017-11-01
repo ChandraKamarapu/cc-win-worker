@@ -1,0 +1,12 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: python
+
+inputs:
+  - name: LIS
+  
+run:
+  path: LIS/rpmbuild/createrpms.py
