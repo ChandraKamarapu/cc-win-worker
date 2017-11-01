@@ -10,4 +10,4 @@ inputs:
   
 run:
   path: /usr/bin/python2
-  args: [print "Hello"]
+  args: ["print "Hello""]
