@@ -23,7 +23,7 @@ resources:
       branch: master
 
 jobs:
-  - name: CloudTest
+  - name: Provision
     plan:
       - aggregate:
         - get: AutomationCode
@@ -35,3 +35,18 @@ jobs:
       - task: execute
         privileged: true
         file: Initiator/cc-win.yml
+        
+jobs:
+  - name: BVT
+    plan:
+      - aggregate:
+        - get: AutomationCode
+        - get: Initiator
+        - get: Get-LIS
+          version: { tag: 'v4.2.3' }
+          params: { globs: ["v4.2.3.tar.gz"] }
+          trigger: true
+      - task: execute
+        privileged: true
+        file: Initiator/cc-win.yml
+
