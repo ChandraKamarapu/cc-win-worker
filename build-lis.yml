@@ -9,4 +9,4 @@ inputs:
   - name: LIS
   
 run:
-  path: python LIS/rpmbuild/createrpms.py
+  path: python2 LIS/rpmbuild/createrpms.py all
