@@ -9,4 +9,4 @@ inputs:
   - name: LIS
   
 run:
-  path: print ("Hello, Python!")
+  path: echo 'print ("Hello, Python!")' | python
