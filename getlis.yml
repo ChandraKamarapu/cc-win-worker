@@ -16,6 +16,7 @@ jobs:
   - name: Build-LIS
     plan:
       - get: LIS
+      - get: Initiator
         trigger: true
       - task: execute
         file: Initiator/build-lis.yml
