@@ -19,4 +19,5 @@ jobs:
       - get: Initiator
         trigger: true
       - task: execute
+        privileged: true
         file: Initiator/build-lis.yml
