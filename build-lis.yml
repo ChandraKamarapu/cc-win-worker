@@ -9,5 +9,5 @@ inputs:
   - name: LIS
   
 run:
-  path: /usr/bin/python2
-  args: ["LIS/rpmbuild/createrpms.py all"]
+  path: uname
+  args: ["-r"]
