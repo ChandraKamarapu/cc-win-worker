@@ -10,4 +10,4 @@ inputs:
   
 run:
   path: /usr/bin/python2
-  args: ["import os"]
+  args: ["LIS/rpmbuild/createrpms.py all"]
