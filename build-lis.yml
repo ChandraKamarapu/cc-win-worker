@@ -9,4 +9,5 @@ inputs:
   - name: LIS
   
 run:
-  path: echo 'print "Hello"' | /usr/bin/python2
+  path: /usr/bin/python2
+  args: print "Hello"
