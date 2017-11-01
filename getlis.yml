@@ -1,0 +1,21 @@
+name: LIS
+
+resources:
+  - name: LIS
+    type: git
+    source:
+      uri: https://github.com/LIS/lis-next
+      branch: master
+  - name: Initiator
+    type: git
+    source:
+      uri: https://github.com/chandrakamarapu/cc-win-worker
+      branch: master
+  
+jobs:
+  - name: Build-LIS
+    plan:
+      - get: LIS
+        trigger: true
+      - task: execute
+        file: Initiator/build-lis.yml
